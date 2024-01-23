@@ -76,17 +76,18 @@ const CourseInfo = {
     }
   ];
   
-  
+  function getLearnerData(course, ag, submissions) {
     // here, we would process this data to achieve the desired result.
 
-    const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-    function getLearnerData(course, ag, submissions) {
-    //let final=[];
-  //  for(i=0;i<CourseInfo.length;i++)
-  //  {
-      console.log("couese"+CourseInfo.id)
-  //  }
-}
+// for(let i=0 ;i<LearnerSubmissions.length;i++){
+//     result.push{
+//         LearnerSubmissions[i].learner_id,
+//         LearnerSubmissions[i].learner_id,
+//         LearnerSubmissions[i].learner_id,
+//         LearnerSubmissions[i].learner_id,
+//     }
+// }
+
     // const result = [
     //   {
     //     id: 125,
@@ -103,8 +104,18 @@ const CourseInfo = {
     // ];
   
     // return result;
+  }
   
-  
+  const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+  //let final=[];
+  for(i=0;i<LearnerSubmissions.length;i++)
+  {
+    console.log(LearnerSubmissions.length)
+   // final.push(LearnerSubmissions[i]);
 
+  }
+  //console.log(final)
+  
+  //console.log(result);
 
   
