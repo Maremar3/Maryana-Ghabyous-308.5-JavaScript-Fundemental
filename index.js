@@ -87,7 +87,7 @@ const CourseInfo = {
         for(i=0;i<LearnerSubmissions.length;i++)
 
         {console.log("ass-id  =   "+LearnerSubmissions[i].assignment_id)
-            if(LearnerSubmissions[i].assignment_id[i]==3){continue}
+            if(LearnerSubmissions[i].assignment_id==3){continue}
             
           if (f==LearnerSubmissions[i].learner_id){
            
