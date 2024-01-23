@@ -78,15 +78,16 @@ const CourseInfo = {
   
   
     // here, we would process this data to achieve the desired result.
-
-    const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
     function getLearnerData(course, ag, submissions) {
-    //let final=[];
-  //  for(i=0;i<CourseInfo.length;i++)
-  //  {
-      console.log("couese"+CourseInfo.id)
-  //  }
-}
+ 
+        for(i=0;i<LearnerSubmissions.length;i++)
+        {
+           console.log("couese"+LearnerSubmissions[i].learner_id)
+        }
+     
+     }
+    const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+  
     // const result = [
     //   {
     //     id: 125,
