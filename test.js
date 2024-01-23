@@ -76,18 +76,33 @@ const CourseInfo = {
     }
   ];
   
-  function getLearnerData(course, ag, submissions) {
+  
     // here, we would process this data to achieve the desired result.
+    function getLearnerData(course, ag, submissions) {
+        let sum=0;
+            let x=[]
+        let f =LearnerSubmissions[0].learner_id
+       // for(j=0;j<2;j++)
+   // {
+        for(i=0;i<LearnerSubmissions.length;i++)
 
-// for(let i=0 ;i<LearnerSubmissions.length;i++){
-//     result.push{
-//         LearnerSubmissions[i].learner_id,
-//         LearnerSubmissions[i].learner_id,
-//         LearnerSubmissions[i].learner_id,
-//         LearnerSubmissions[i].learner_id,
-//     }
-// }
+        { console.log("couese"+LearnerSubmissions[i].learner_id)
+            
+            
+          if (f==LearnerSubmissions[i].learner_id){
+           sum=sum+LearnerSubmissions[i].submission.score}
+            else { sum=0; f =LearnerSubmissions[i].learner_id;sum=sum+LearnerSubmissions[i].submission.score}
 
+          
+            console.log("sum"+sum)
+           console.log("score"+LearnerSubmissions[i].submission.score)
+        }
+    }
+   // }
+    
+     
+    const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+  
     // const result = [
     //   {
     //     id: 125,
@@ -104,18 +119,8 @@ const CourseInfo = {
     // ];
   
     // return result;
-  }
   
-  const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-  //let final=[];
-  for(i=0;i<LearnerSubmissions.length;i++)
-  {
-    console.log(LearnerSubmissions.length)
-   // final.push(LearnerSubmissions[i]);
+  
 
-  }
-  //console.log(final)
-  
-  //console.log(result);
 
   
