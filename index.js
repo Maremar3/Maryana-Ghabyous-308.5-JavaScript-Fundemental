@@ -83,6 +83,7 @@ const CourseInfo = {
         for(i=0;i<LearnerSubmissions.length;i++)
         {
            console.log("couese"+LearnerSubmissions[i].learner_id)
+           console.log("score"+LearnerSubmissions[i].submission.score)
         }
      
      }
