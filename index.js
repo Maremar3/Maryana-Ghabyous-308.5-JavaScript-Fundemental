@@ -85,22 +85,22 @@ const CourseInfo = {
             let x=[]
         let f =LearnerSubmissions[0].learner_id
         let A= AssignmentGroup.assignments[0].points_possible
-       // for(j=0;j<2;j++)
-   // {
-
-  //  for(let assi=0;assi<AssignmentGroup.assignments.length;assi++)
+  //      for(j=0;j<2;j++)
   //  {
-  //   if(AssignmentGroup.assignments[assi].id==3){continue}
-  //   console.log("point_possile  : "+AssignmentGroup.assignments[assi].points_possible)
-  //   if (A==AssignmentGroup.assignments[assi].points_possible){
+
+   for(let assi=0;assi<AssignmentGroup.assignments.length;assi++)
+   {
+    if(AssignmentGroup.assignments[assi].id==3){continue}
+    console.log("point_possile  : "+AssignmentGroup.assignments[assi].points_possible)
+    if (A==AssignmentGroup.assignments[assi].points_possible){
              
-  //       summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
-  //        else {kk=kk+1; summ[kk]=0; A =AssignmentGroup.assignments[assi].points_possible;summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+        summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+         else {kk=kk+1; summ[kk]=0; A =AssignmentGroup.assignments[assi].points_possible;summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
 
        
-  //        console.log("sum of submission score :  "+summ[kk])
-  //       //console.log("score"+LearnerSubmissions[i].submission.score)
-  //    }
+         console.log("sum of submission score :  "+summ[kk])
+        //console.log("score"+LearnerSubmissions[i].submission.score)
+     }
 
 
 
@@ -117,7 +117,7 @@ const CourseInfo = {
 // })
 // console.log(userFullnames)
      //console.log("sum of submission scoreeeeee :  "+summ[kk])
-
+let subscore=function scor(){
         for(i=0;i<LearnerSubmissions.length;i++)
 
         {           
@@ -126,20 +126,24 @@ const CourseInfo = {
           if (f==LearnerSubmissions[i].learner_id){
                     
            sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
-            else {k=k+1; sum[k]=0; f =LearnerSubmissions[i].learner_id;sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
+            else {k=k+1; sum[k]=0; f =LearnerSubmissions[i].learner_id;sum[k]=sum[k]+LearnerSubmissions[i].submission.score;} 
           
-           // console.log("sum  :  "+sum[k])
+            //console.log("sum  :  "+sum[k])
            //console.log("score"+LearnerSubmissions[i].submission.score)
-        }
-        for(let kk=0;kk<k.length;kk++)console.log("kk  ="+k[kk])
-
+            }
+          }
+       // console.log("sum  :  "+sum[0])
+       // console.log("sum  :  "+sum[1])
+        //for(let kk=0;kk<k.length;kk++){      //console.log("kk  ="+k[kk])
+       //console.log("summmmmm"+sum.length)
         let learn=LearnerSubmissions[0].learner_id
         console.log("ID  :  "+LearnerSubmissions[0].learner_id)
+        console.log("sum  :  "+sum[0])
 
         for (i=0;i<LearnerSubmissions.length;i++){
             
             if (learn==LearnerSubmissions[i].learner_id){continue}
-            else{learn=LearnerSubmissions[i].learner_id; console.log("ID  :  "+LearnerSubmissions[i].learner_id)}
+            else{learn=LearnerSubmissions[i].learner_id; console.log("ID  :  "+LearnerSubmissions[i].learner_id) ; console.log("sum  :  "+sum[i])}
         }
     }
    
