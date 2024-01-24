@@ -86,7 +86,7 @@ const CourseInfo = {
    // {
         for(i=0;i<LearnerSubmissions.length;i++)
 
-        { console.log("couese"+LearnerSubmissions[i].learner_id)
+        { 
             
             
           if (f==LearnerSubmissions[i].learner_id){

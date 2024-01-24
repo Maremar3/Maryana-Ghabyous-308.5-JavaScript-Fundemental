@@ -79,26 +79,50 @@ const CourseInfo = {
   
     // here, we would process this data to achieve the desired result.
     function getLearnerData(course, ag, submissions) {
-        let sum=[];let k=0; sum[k]=0
+        let sum=[];let k=0; sum[k]=0;
+        //let summ=[];let kk=0 summ[kk]=0
+        let summ=[]; let kk=0; summ[kk]=0;
             let x=[]
         let f =LearnerSubmissions[0].learner_id
+        let A= AssignmentGroup.assignments[0].points_possible
        // for(j=0;j<2;j++)
    // {
+
+   for(let assi=0;assi<AssignmentGroup.assignments.length;assi++)
+   {
+    if(AssignmentGroup.assignments[assi].id==3){continue}
+    console.log("point_possile  : "+AssignmentGroup.assignments[assi].points_possible)
+    if (A==AssignmentGroup.assignments[assi].points_possible){
+             
+        summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+         else {kk=kk+1; summ[kk]=0; A =AssignmentGroup.assignments[assi].points_possible;summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+
+       
+         console.log("sum of submission score :  "+summ[kk])
+        //console.log("score"+LearnerSubmissions[i].submission.score)
+     }
+
+
+
         for(i=0;i<LearnerSubmissions.length;i++)
 
-        {console.log("ass-id  =   "+LearnerSubmissions[i].assignment_id)
+        {  
+              console.log("id  :   "+LearnerSubmissions[i].learner_id)
+           // console.log("ass-id  =   "+LearnerSubmissions[i].assignment_id)
+            //console.log("group-weight :"+ AssignmentGroup.group_weight)
             if(LearnerSubmissions[i].assignment_id==3){continue}
             
           if (f==LearnerSubmissions[i].learner_id){
-           
-
+         
+        
            // for (h=0;h>3;h++)
            //{ if (AssignmentGroup[i].assignments[h].due_at=2023){console.log("big")}}
+          
            sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
             else {k=k+1; sum[k]=0; f =LearnerSubmissions[i].learner_id;sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
 
           
-            console.log("sum"+sum[k])
+            console.log("sum  :  "+sum[k])
            //console.log("score"+LearnerSubmissions[i].submission.score)
         }
     }
