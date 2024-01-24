@@ -88,46 +88,61 @@ const CourseInfo = {
        // for(j=0;j<2;j++)
    // {
 
-   for(let assi=0;assi<AssignmentGroup.assignments.length;assi++)
-   {
-    if(AssignmentGroup.assignments[assi].id==3){continue}
-    console.log("point_possile  : "+AssignmentGroup.assignments[assi].points_possible)
-    if (A==AssignmentGroup.assignments[assi].points_possible){
+  //  for(let assi=0;assi<AssignmentGroup.assignments.length;assi++)
+  //  {
+  //   if(AssignmentGroup.assignments[assi].id==3){continue}
+  //   console.log("point_possile  : "+AssignmentGroup.assignments[assi].points_possible)
+  //   if (A==AssignmentGroup.assignments[assi].points_possible){
              
-        summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
-         else {kk=kk+1; summ[kk]=0; A =AssignmentGroup.assignments[assi].points_possible;summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+  //       summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
+  //        else {kk=kk+1; summ[kk]=0; A =AssignmentGroup.assignments[assi].points_possible;summ[kk]=summ[kk]+AssignmentGroup.assignments[assi].points_possible}
 
        
-         console.log("sum of submission score :  "+summ[kk])
-        //console.log("score"+LearnerSubmissions[i].submission.score)
-     }
+  //        console.log("sum of submission score :  "+summ[kk])
+  //       //console.log("score"+LearnerSubmissions[i].submission.score)
+  //    }
 
 
+
+//   let userFullnames = AssignmentGroup.assignments.map(function(element)
+//     {
+//        // if(element.id==3)        {continue;}
+//        var idnot3=AssignmentGroup.assignments.filter(AssignmentGroup.assignments.id !=3);
+//        console.log("id33"+idnot3)
+// //greaterThan2;
+//        // else {console.log("iddd"+element.id)}
+//   // if(AssignmentGroup.assignments[assi].id==3){continue}
+//     return `${element.points_possible} `;
+//     return `${element.id} `;
+// })
+// console.log(userFullnames)
+     //console.log("sum of submission scoreeeeee :  "+summ[kk])
 
         for(i=0;i<LearnerSubmissions.length;i++)
 
-        {  
-              console.log("id  :   "+LearnerSubmissions[i].learner_id)
-           // console.log("ass-id  =   "+LearnerSubmissions[i].assignment_id)
-            //console.log("group-weight :"+ AssignmentGroup.group_weight)
+        {           
             if(LearnerSubmissions[i].assignment_id==3){continue}
             
           if (f==LearnerSubmissions[i].learner_id){
-         
-        
-           // for (h=0;h>3;h++)
-           //{ if (AssignmentGroup[i].assignments[h].due_at=2023){console.log("big")}}
-          
+                    
            sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
             else {k=k+1; sum[k]=0; f =LearnerSubmissions[i].learner_id;sum[k]=sum[k]+LearnerSubmissions[i].submission.score}
-
           
-            console.log("sum  :  "+sum[k])
+           // console.log("sum  :  "+sum[k])
            //console.log("score"+LearnerSubmissions[i].submission.score)
         }
+        for(let kk=0;kk<k.length;kk++)console.log("kk  ="+k[kk])
+
+        let learn=LearnerSubmissions[0].learner_id
+        console.log("ID  :  "+LearnerSubmissions[0].learner_id)
+
+        for (i=0;i<LearnerSubmissions.length;i++){
+            
+            if (learn==LearnerSubmissions[i].learner_id){continue}
+            else{learn=LearnerSubmissions[i].learner_id; console.log("ID  :  "+LearnerSubmissions[i].learner_id)}
+        }
     }
-   // }
-    
+   
      
     const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
   
